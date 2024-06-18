@@ -20,7 +20,7 @@ const imageArray = [
 const Experiences = () => {
   return (
     <section className="flex items-center lg:gap-[10%] gap-2 flex-col sm:flex-row">
-      <figure
+      <div
         className="sm:w-1/2 px-2 py-4 max-h-64 h-64 flex items-center justify-between rounded-3xl"
         style={{
           background:
@@ -29,17 +29,20 @@ const Experiences = () => {
         aria-labelledby="resort-treat-image"
       >
         {imageArray.map((item, index) => (
-          <div key={index} className="flex-1 mx-1 h-full flex items-center">
+          <figure key={index} className="flex-1 mx-1 h-full flex items-center">
             <img
               className="object-contain h-full w-full"
               src={item.src}
               alt={item.description}
+              tabIndex={0} // Make images focusable for keyboard users
             />
-          </div>
+          </figure>
         ))}
-      </figure>
+      </div>
       <article className="sm:w-1/2 p-4">
-        <h3 className="text-xl font-bold mb-4">Exciting Experiences</h3>
+        <h3 id="resort-treat-image" className="text-xl font-bold mb-4">
+          Exciting Experiences
+        </h3>
         <p className="mb-4">
           From group picnics, to boat cruise down to exciting adventures,
           luxuryvacay summer edition promises to leave you thrilled every step
@@ -49,7 +52,7 @@ const Experiences = () => {
         <Button>Book now</Button>
         <a
           href="/"
-          className="text-[rgba(251,133,0,1)] inline-flex items-center mx-2 cursor-pointer mt-4"
+          className="text-[rgba(251,133,0,1)] inline-flex items-center mx-2 cursor-pointer mt-4 focus:outline-none focus:ring-2 focus:ring-orange-500"
           aria-label="View vacation details"
         >
           <span>Vacation details</span>
