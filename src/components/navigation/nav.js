@@ -16,7 +16,7 @@ const Nav = () => {
           Luxury<span className="text-[rgba(251,133,0,1)]">Vacays</span>
         </Link>
       </div>
-      <ul className="flex space-x-8" role="menubar">
+      <ul className="flex space-x-8 flex-wrap" role="menubar">
         {navItems.map((item, index) => (
           <li
             key={index}

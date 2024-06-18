@@ -42,7 +42,7 @@ const ResortTreat = () => {
   }, [figureHeight]);
 
   return (
-    <article className="p-4 lg:p-12 mb-12">
+    <article className="p-4 lg:p-12">
       <header
         className="font-bold text-3xl lg:text-4xl text-center bg-center bg-contain bg-no-repeat py-10"
         style={{ backgroundImage: `url(${Stars})` }}
