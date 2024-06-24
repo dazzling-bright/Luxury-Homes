@@ -7,7 +7,7 @@ import Tourism from "./components/body/tourism";
 import InfoCard from "./components/body/InfoCard";
 import ReviewSection from "./components/body/Reviews";
 import Newsletter from "./components/body/Newsletter";
-import Footer from "./components/body/Footer";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (

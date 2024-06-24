@@ -1,3 +1,4 @@
+import React from "react";
 import {
   FaTwitter,
   FaInstagram,
@@ -6,16 +7,8 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
-const SocialIcon = ({ href, icon: Icon }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="p-1 border border-black rounded-full text-black"
-  >
-    <Icon className="w-6 h-6" />
-  </a>
-);
+import SocialIcon from "./Socials";
+import LanguageDropdown from "./languageDropdown";
 
 const FooterSection = ({ title, items }) => (
   <section className="flex flex-col">
@@ -79,7 +72,7 @@ const Footer = () => {
       ))}
       <div className="font-thin text-sm col-span-1 md:col-span-2 lg:col-span-4 mt-6 text-center">
         <div className="flex justify-center items-center space-x-4">
-          <p>English</p>
+          <LanguageDropdown />
           <p>Privacy Policy</p>
           <p>Terms</p>
           <p>Copyright &copy; {currentYear} Luxury Vacays</p>
