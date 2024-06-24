@@ -52,7 +52,7 @@ const ReviewSection = () => {
         <p>See what our customers have to say about us</p>
       </header>
       <div
-        className="w-[80%] rounded-3xl max-w-fit mx-auto mb-8 mt-4 p-8"
+        className="w-[80%] rounded-3xl mx-auto mb-8 mt-4 p-8"
         style={{
           background:
             "linear-gradient(to bottom, white, white, rgba(142, 236, 245))",
@@ -62,7 +62,7 @@ const ReviewSection = () => {
           {reviews.map(({ imgSrc, imgAlt, name, review }, index) => (
             <article key={index} className="carousel-item">
               <div
-                className="h-[300px] justify-evenly m-8 flex flex-col items-center p-4 gap-2 border border-solid rounded-2xl bg-white"
+                className="min-h-[300px] justify-evenly m-8 flex flex-col items-center p-4 gap-2 border border-solid rounded-2xl bg-white text-center"
                 style={{
                   boxShadow: "0 0 2px 5px rgba(254, 214, 170, 1)",
                 }}

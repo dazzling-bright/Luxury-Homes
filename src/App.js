@@ -6,6 +6,8 @@ import Experiences from "./components/body/experiences";
 import Tourism from "./components/body/tourism";
 import InfoCard from "./components/body/InfoCard";
 import ReviewSection from "./components/body/Reviews";
+import Newsletter from "./components/body/Newsletter";
+import Footer from "./components/body/Footer";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <Tourism />
       <InfoCard />
       <ReviewSection />
+      <Newsletter />
+      <Footer />
     </>
   );
 }
