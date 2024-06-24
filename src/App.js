@@ -5,6 +5,7 @@ import ResortTreat from "./components/body/resortTreats";
 import Experiences from "./components/body/experiences";
 import Tourism from "./components/body/tourism";
 import InfoCard from "./components/body/InfoCard";
+import ReviewSection from "./components/body/Reviews";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Experiences />
       <Tourism />
       <InfoCard />
+      <ReviewSection />
     </>
   );
 }
