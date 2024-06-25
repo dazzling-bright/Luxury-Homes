@@ -1,39 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../button";
+import navItems from "./NavItems";
+import NavLink from "./NavLink";
+import Hamburger from "./Hamburger";
 
 const Nav = () => {
-  const navItems = ["Home", "Trips", "Services", "About", "Contact Us"];
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <nav
-      className=" text-[
-      rgba(50, 27, 0, 1)] p-4 flex items-center justify-between flex-wrap"
+      className="text-[rgba(50, 27, 0, 1)] p-4 flex items-center justify-between flex-wrap"
       aria-label="Main Navigation"
     >
       <div>
-        <Link href="/" className="font-bold">
+        <Link to="/" className="font-bold">
           Luxury<span className="text-[rgba(251,133,0,1)]">Vacays</span>
         </Link>
       </div>
-      <ul className="flex space-x-8 flex-wrap" role="menubar">
+      <div className="md:hidden">
+        <Hamburger menuOpen={menuOpen} toggleMenu={toggleMenu} />
+      </div>
+      <ul
+        className={`flex-col w-full md:flex-grow md:justify-end items-center md:w-auto md:flex md:flex-row space-y-4 md:space-y-0 md:space-x-8 flex-wrap transition-all duration-300 ease-in-out ${
+          menuOpen ? "flex" : "hidden"
+        }`}
+        role="menubar"
+      >
         {navItems.map((item, index) => (
-          <li
-            key={index}
-            className="border-b-4 py-2 border-white cursor-pointer transition-colors duration-300 hover:text-[rgba(251,133,0,1)] hover:border-[rgba(251,133,0,1)] focus:border-[rgba(251,133,0,1)]"
-            role="none"
-          >
-            <Link
-              to={`/${item.toLowerCase().replace(/ /g, "-")}`}
-              className="focus:outline-none focus:text-[rgba(251,133,0,1)] focus:underline"
-              role="menuitem"
-            >
-              {item}
-            </Link>
-          </li>
+          <NavLink key={index} item={item} />
         ))}
+        <Button className="">Book now</Button>
       </ul>
-      <Button>Book now</Button>
     </nav>
   );
 };
