@@ -13,7 +13,7 @@ const SummerLocations = () => {
   ];
 
   return (
-    <div className="mt-[25rem] lg:mt-[15rem] mb-20">
+    <div className="mt-[25rem] lg:mt-[15rem] mb-20 mx-auto">
       <header
         className="font-bold text-2xl text-center bg-center bg-contain bg-no-repeat py-10"
         style={{
@@ -28,7 +28,7 @@ const SummerLocations = () => {
 
       {/** Card Component */}
       <main
-        className="flex p-8 rounded-lg shadow-md"
+        className="flex flex-col md:flex-row p-8 gap-4 w-3/4 mx-auto rounded-lg shadow-md"
         style={{
           background:
             "linear-gradient(to bottom, white, white, rgba(142, 236, 245))",
@@ -37,9 +37,9 @@ const SummerLocations = () => {
         {summerLocationImages.map((location, index) => (
           <article
             key={index}
-            className="flex flex-col mx-4 rounded-lg overflow-hidden bg-white shadow-lg"
+            className="flex flex-col md:w-1/3 mx-4 md:mx-0 rounded-3xl overflow-hidden bg-white shadow-lg mb-4"
           >
-            <figure>
+            <figure className="">
               <img
                 src={location.image}
                 alt={location.description}
@@ -49,12 +49,13 @@ const SummerLocations = () => {
             <div className="p-4 flex flex-col gap-4">
               <h3 className="text-lg font-semibold flex justify-between items-center">
                 <div>
-                  {location.name}{" "}
-                  <span style={{ display: "block" }} className="font-thin">
-                    $2000
-                  </span>
+                  {location.name} <span className="font-thin block">$2000</span>
                 </div>
-                <img src={BookmarkCheck} alt="Bookmark" className="ml-2" />
+                <img
+                  src={BookmarkCheck}
+                  alt="Bookmark"
+                  className="ml-2 cursor-pointer"
+                />
               </h3>
               <p className="text-gray-600 flex justify-between items-center flex-wrap">
                 <span>Booking ID: 24863dr</span>
