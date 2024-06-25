@@ -42,7 +42,7 @@ const ResortTreat = () => {
   }, [figureHeight]);
 
   return (
-    <article className="p-4 lg:p-12">
+    <article className="p-8 lg:p-12 md:w-5/6 md:p-4 mx-auto">
       <header
         className="font-bold text-3xl lg:text-4xl text-center bg-center bg-contain bg-no-repeat py-10"
         style={{ backgroundImage: `url(${Stars})` }}
@@ -54,8 +54,8 @@ const ResortTreat = () => {
         </p>
       </header>
       <section className="flex flex-col sm:flex-row gap-4 pb-8">
-        <div className="w-full lg:w-1/2 lg:p-4" ref={divRef}>
-          <h3 className="font-bold text-2xl lg:text-3xl">Resort Treats</h3>
+        <div className="justify-between lg:w-1/2 lg:p-4" ref={divRef}>
+          <h3 className="font-bold text-2xl lg:text-3xl mb-4">Resort Treats</h3>
           <p className="text-sm lg:text-base">
             We’ve curated an exciting number of things to give you the luxurious
             vacation that you deserve and keep you thrilled every second of the
@@ -80,8 +80,8 @@ const ResortTreat = () => {
             className="text-[rgba(251,133,0,1)] inline mx-2 cursor-pointer"
             aria-label="View vacation details"
           >
-            <span>Vacation details</span>
-            <FaArrowRight className="inline ml-2" />
+            <span className="hover:mr-2 transition-all">Vacation details</span>
+            <FaArrowRight className="inline ml-2 hover:ml-4 transition-all" />
           </a>
         </div>
         <figure

@@ -11,7 +11,7 @@ import SocialIcon from "./Socials";
 import LanguageDropdown from "./languageDropdown";
 
 const FooterSection = ({ title, items }) => (
-  <section className="flex flex-col">
+  <section className="flex flex-col mb-4 md:mb-0">
     <h3 className="text-lg font-semibold mb-2">{title}</h3>
     <ul className="space-y-1">
       {items.map((item, index) => (
@@ -62,7 +62,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-orange-500 p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <footer className="bg-[rgba(251,133,0,1)] p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
       {footerData.map((section, index) => (
         <FooterSection
           key={index}
@@ -70,12 +70,15 @@ const Footer = () => {
           items={section.items}
         />
       ))}
-      <div className="font-thin text-sm col-span-1 md:col-span-2 lg:col-span-4 mt-6 text-center">
-        <div className="flex justify-center items-center space-x-4">
-          <LanguageDropdown />
-          <p>Privacy Policy</p>
-          <p>Terms</p>
-          <p>Copyright &copy; {currentYear} Luxury Vacays</p>
+      <div className="col-span-1 md:col-span-2 lg:col-span-4 flex flex-col lg:flex-row justify-between items-center mt-4 lg:mt-0">
+        <LanguageDropdown />
+        <div className="flex flex-col sm:flex-row gap-4 my-4 text-center lg:text-left">
+          <span>Privacy Policy</span>
+          <span>Terms</span>
+          <span>Copyright &copy; {currentYear}</span>
+          <span>Luxury Vacays</span>
+        </div>
+        <div className="flex gap-4">
           {socialLinks.map((link, index) => (
             <SocialIcon key={index} href={link.href} icon={link.icon} />
           ))}

@@ -31,7 +31,7 @@ const ContentOne = () => {
         <h2 className="text-2xl">What we Cover</h2>
         <p className="text-[rgba(251,133,0,1)] hover:underline">See more</p>
       </header>
-      <figure className="flex flex-wrap justify-between gap-4">
+      <figure className="flex flex-wrap justify-between gap-6">
         {imageArray.map((item, index) => (
           <div
             key={index}
@@ -40,7 +40,7 @@ const ContentOne = () => {
             <img
               src={item.image}
               alt={item.title}
-              className="block w-20 h-20 object-cover"
+              className="block w-20 h-20 object-contain"
             />
             <p className="text-[0.8rem] font-bold text-center mt-2">
               {item.title}

@@ -19,7 +19,7 @@ const imageArray = [
 
 const Experiences = () => {
   return (
-    <section className="flex items-center lg:gap-[10%] gap-2 flex-col sm:flex-row">
+    <section className="flex items-center lg:gap-[10%] gap-2 flex-col sm:flex-row sm:w-5/6 mx-auto">
       <div
         className="sm:w-1/2 px-2 py-4 max-h-64 h-64 flex items-center justify-between rounded-3xl"
         style={{
@@ -39,7 +39,7 @@ const Experiences = () => {
           </figure>
         ))}
       </div>
-      <article className="sm:w-1/2 p-4">
+      <article className="sm:w-1/2 justify-between px-4 py-2">
         <h3 id="resort-treat-image" className="text-xl font-bold mb-4">
           Exciting Experiences
         </h3>
@@ -52,11 +52,11 @@ const Experiences = () => {
         <Button>Book now</Button>
         <a
           href="/"
-          className="text-[rgba(251,133,0,1)] inline-flex items-center mx-2 cursor-pointer mt-4 focus:outline-none focus:ring-2 focus:ring-orange-500"
+          className="text-[rgba(251,133,0,1)] inline mx-2 cursor-pointer"
           aria-label="View vacation details"
         >
-          <span>Vacation details</span>
-          <FaArrowRight className="ml-2" />
+          <span className="hover:mr-2 transition-all">Vacation details</span>
+          <FaArrowRight className="inline ml-2 hover:ml-4 transition-all" />
         </a>
       </article>
     </section>
